@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Games Web Store</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/multiselect.css">
+  <script src="/static/js/jquery-2.2.4.min.js"></script>
+  <script src="/static/js/jquery.multi-select.js"></script>
+  <script src="/static/js/jquery.multi-select.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Games Web Store</h1>
+    <div>
+      <button class="btn btn-add" onclick="addGameModal()" id="add-button">Add New Game</button>
+    </div>
+  </header>
+  <main>
+    <form onsubmit="return false">
+      <label for="platform-select">Platform:</label>
+      <select id="platform-select" onchange="filterGames()">
+        <option value="All" selected>All platforms</option>
+        <option value="PC">PC</option>
+        <option value="PS4">PS4</option>
+        <option value="PS5">PS5</option>
+        <option value="Xbox One">Xbox One</option>
+        <option value="Nintendo Switch">Nintendo Switch</option>
+        <!-- Add more platforms here -->
+      </select>
+
+      <label for="genre-select">Genre:</label>
+      <select id="genre-select" onchange="filterGames()">
+        <option value="All" selected>All genres</option>
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Shooting">Shooting</option>
+        <option value="Open world">Open world</option>
+        <option value="Simulation">Simulation</option>
+        <option value="Sports">Sports</option>
+        <option value="Survival">Survival</option>
+        <option value="Zombie">Zombie</option>
+        <!-- Add more genres here -->
+      </select>
+
+      <label for="price-filter">Price:</label>
+      <select id="price-filter">
+        <option value="100000000" selected>Select a Price</option>
+        <option value="10">Under $10</option>
+        <option value="20">Under $20</option>
+        <option value="50">Under $50</option>
+        <option value="enter-price">Enter price</option>
+      </select>
+      <div id="enter-price-container" class="hidden">
+        <label for="enter-price">Enter maximum price:</label>
+        <input type="number" id="enter-price" name="enter-price">
+      </div>
+
+      <button class="btn btn-filter" onclick="clearFilter()" id="filter-button"> Clear Filter</button>
+    </form>
+  </main>
+  <main id="games">
+    <!-- Game data will be added here -->
+  </main>
+  <!-- Game details modal -->
+  <div id="game-modal" class="modal">
+    <div id="game-modal-content" class="modal-content">
+    </div>
+  </div>
+
+  <div id="addGameModal" class="modal">
+    <div id="addGameModal-content" class="modal-content">
+      <span id="addGameModal-close">&times;</span>
+      <div class="addNewGame">
+        <form onsubmit="addNewGame()">
+          <div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+          </div>
+          <div>
+            <label for="developer">Developer:</label>
+            <input type="text" id="developer" required>
+          </div>
+
+          <div>
+            <label for="release-date">Release Date:</label>
+            <input type="date" id="release-date" required>
+          </div>
+
+          <div>
+            <label for="description">Description:</label>
+            <textarea id="description" required rows="4"></textarea>
+          </div>
+
+          <div>
+            <label for="price">Price:</label>
+            <input type="number" id="price" step="0.01" required>
+          </div>
+
+          <div>
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" min="1" max="5" required>
+          </div>
+
+          <div>
+            <label for="genre">Genre:</label>
+            <select id="genre" name="genre" required multiple>
+              <option value="Action">Action</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Shooting">Shooting</option>
+              <option value="Open world">Open world</option>
+              <option value="Simulation">Simulation</option>
+              <option value="Sports">Sports</option>
+              <option value="Survival">Survival</option>
+              <option value="Zombie">Zombie</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="platform">Platform:</label>
+            <select id="platform" name="platform" required multiple>
+              <option value="PC">PC</option>
+              <option value="PS4">PS4</option>
+              <option value="PS5">PS5</option>
+              <option value="Xbox One">Xbox One</option>
+              <option value="Nintendo Switch">Nintendo Switch</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="image-url">Image URL:</label>
+            <input type="url" id="image-url" required style="width:665px">
+          </div>
+
+          <button type="submit">Add Game</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(function () {
+      $('#genre').multiSelect({
+        texts: {
+          placeholder: 'Select Genre',
+        }
+      });
+      $('#platform').multiSelect({
+        texts: {
+          placeholder: 'Select Platform',
+        }
+      });
+    });
+  </script>
+  <footer class="footer">
+    <!-- Copyright -->
+    <div class="footer-content">
+      © 2023 Copyright:
+      <a class="text-dark" href="https://github.com/pavankumarvm/vgame_store.git">Pavankumar Maurya</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>

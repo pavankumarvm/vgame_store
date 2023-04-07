@@ -1,0 +1,239 @@
+{
+  "games": [
+    {
+      "title": "Super Mario Odyssey",
+      "developer": "Nintendo",
+      "releaseDate": "October 27, 2017",
+      "description": "Join Mario and his new companion Cappy on a globe-trotting 3D adventure.",
+      "price": 59.99,
+      "genre": [
+        "Platformer",
+        "Adventure",
+        "Action"
+      ],
+      "rating": 4,
+      "platforms": [
+        "Nintendo Switch"
+      ],
+      "image": "https://beanstalk.io/wp-content/uploads/2022/11/854342.png"
+    },
+    {
+      "title": "Assassin's Creed Valhalla",
+      "developer": "Ubisoft",
+      "releaseDate": "November 10, 2020",
+      "description": "Assassin's Creed Valhalla is an action role-playing video game developed by Ubisoft Montreal and published by Ubisoft. It is the twelfth major installment and the twenty-second release in the Assassin's Creed series, and a successor to the 2018 game Assassin's Creed Odyssey.",
+      "price": 99.99,
+      "genre": [
+        "Action",
+        "Adventure",
+        "Stealth",
+        "Fighting"
+      ],
+      "rating": 4,
+      "platforms": [
+        "PC",
+        "PS4",
+        "PS5",
+        "Xbox One",
+        "Xbox Series X/S"
+      ],
+      "image": "https://image.api.playstation.com/vulcan/img/rnd/202011/0302/8jomNsyMYDoJnzFkBrr9Rit2.jpg"
+    },
+    {
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "developer": "Nintendo",
+      "releaseDate": "March 3, 2017",
+      "description": "Explore the vast open world of Hyrule in this critically acclaimed adventure game.",
+      "price": 69.99,
+      "genre": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Open World"
+      ],
+      "rating": 5,
+      "platforms": [
+        "Nintendo Switch"
+      ],
+      "image": "https://wallpapers.com/images/file/ultra-hd-breath-of-the-wild-game-cover-ny16mxrpbl6lo96p.jpg"
+    },
+    {
+      "title": "Red Dead Redemption 2",
+      "developer": "Rockstar Games",
+      "releaseDate": "October 26, 2018",
+      "description": "Experience the epic story of outlaw Arthur Morgan and the Van der Linde gang in the Wild West.",
+      "price": 35.99,
+      "genre": [
+        "Action",
+        "Adventure",
+        "Role-Playing",
+        "Western",
+        "Open World",
+        "Third-Person Shooter",
+        "Shooting"
+      ],
+      "rating": 5,
+      "platforms": [
+        "PS5",
+        "PS4",
+        "Xbox One",
+        "PC"
+      ],
+      "image": "https://www.xtrafondos.com/en/descargar.php?id=3380&resolucion=3840x2160.jpg"
+    },
+    {
+      "title": "Overwatch",
+      "developer": "Blizzard Entertainment",
+      "releaseDate": "May 24, 2016",
+      "description": "Fight for the future in this team-based shooter set on a near-future Earth.",
+      "price": 19.99,
+      "genre": [
+        "First-Person Shooter",
+        "Multiplayer",
+        "Shooting"
+      ],
+      "rating": 4,
+      "platforms": [
+        "PlayStation 4",
+        "Xbox One",
+        "PC"
+      ],
+      "image": "https://www.theouterhaven.net/wp-content/uploads/2016/06/overwatch-heroes-background-blizzard-1080x623.png"
+    },
+    {
+      "title": "FIFA 22",
+      "developer": "EA Sports",
+      "releaseDate": "October 1, 2021",
+      "description": "Experience the excitement of football with authentic gameplay, teams, and players.",
+      "price": 49.99,
+      "genre": [
+        "Sports",
+        "Simulation"
+      ],
+      "rating": 4,
+      "platforms": [
+        "PlayStation 4",
+        "PlayStation 5",
+        "Xbox One",
+        "Xbox Series X/S",
+        "PC"
+      ],
+      "image": "https://images6.alphacoders.com/115/1157073.png"
+    },
+    {
+      "title": "The Last of Us Part II",
+      "developer": "Naughty Dog",
+      "releaseDate": "June 19, 2020",
+      "description": "The game is set five years after the events of The Last of Us (2013), players control 19-year-old Ellie, who comes into conflict with a mysterious cult in a post-apocalyptic United States.",
+      "price": 59.99,
+      "genre": [
+        "Action",
+        "Adventure",
+        "Zombie",
+        "Survival"
+      ],
+      "rating": 5,
+      "platforms": [
+        "PS4",
+        "PS5"
+      ],
+      "image": "https://images8.alphacoders.com/776/776592.jpg"
+    },
+    {
+      "title": "Ori and the Will of the Wisps",
+      "developer": "Moon Studios",
+      "releaseDate": "March 11, 2020",
+      "description": "The little spirit Ori is no stranger to peril, but when a fateful flight puts the owlet Ku in harm's way, it will take more than bravery to bring a family back together, heal the broken land of Niwen, and discover Ori's true destiny.",
+      "price": 44.98,
+      "genre": [
+        "Action",
+        "Adventure",
+        "Platformer"
+      ],
+      "rating": 5,
+      "platforms": [
+        "Xbox One",
+        "PC",
+        "Nintendo Switch"
+      ],
+      "image": "https://switchplayer.net/wp-content/uploads/2020/09/Ori-and-the-Will-of-the-Wisps-banner.jpg"
+    },
+    {
+      "title": "God of War",
+      "developer": "Santa Monica Studio",
+      "releaseDate": "April 20, 2018",
+      "description": "God of War is an action-adventure game that follows Kratos, a Spartan warrior who seeks to start a new life with his son Atreus, after the death of his wife. The game takes place in Norse mythology and features various mythological creatures and gods.",
+      "price": 19.99,
+      "genre": [
+        "Action",
+        "Adventure",
+        "Mythology"
+      ],
+      "rating": 4.8,
+      "platforms": [
+        "PS4",
+        "PS5",
+        "PC"
+      ],
+      "image": "https://wallpapercave.com/wp/wp2680117.jpg"
+    },
+    {
+      "title": "State of Decay 2",
+      "developer": "Undead Labs",
+      "releaseDate": "May 22, 2018",
+      "description": "State of Decay 2 is an open-world survival game that takes place in a zombie apocalypse. Players must manage a community of survivors, scavenge for resources, and build up their base while facing various threats from zombies and other survivors.",
+      "price": 29.99,
+      "genre": [
+        "Survival",
+        "Zombie",
+        "Third-Person Shooter"
+      ],
+      "rating": 4.2,
+      "platforms": [
+        "Xbox One",
+        "PC"
+      ],
+      "image": "https://wallpapercave.com/wp/wp3024606.jpg"
+    },
+    {
+      "title": "Sniper Elite 4",
+      "developer": "Rebellion Developments",
+      "releaseDate": "February 14, 2017",
+      "description": "Sniper Elite 4 is a third-person tactical shooter game that takes place during World War II. Players control Karl Fairburne, an elite sniper who must complete various missions behind enemy lines. The game features realistic ballistics and a slow-motion X-Ray kill cam that shows the internal damage caused by the player's shots.",
+      "price": 39.99,
+      "genre": [
+        "Third-Peerson Shooter",
+        "World War 2",
+        "Action"
+      ],
+      "rating": 4.5,
+      "platforms": [
+        "PS4",
+        "Xbox One",
+        "PC"
+      ],
+      "image": "https://cdn.wccftech.com/wp-content/uploads/2017/02/Sniper-Elite-4-Logo.jpg"
+    },
+    {
+      "title": "A New Game",
+      "developer": "Pavankumar Maurya",
+      "releaseDate": "2023-04-07",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      "price": "49.99",
+      "genre": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Sports"
+      ],
+      "rating": "5",
+      "platform": [
+        "PC",
+        "PS4",
+        "PS5",
+        "Xbox One"
+      ],
+      "image": "https://assets1.ignimgs.com/2020/10/02/1238-512-1601678694055.jpg"
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #2f3640;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+header input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+}
+
+header button {
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.game-card {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.game-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.game-card h2 {
+  font-size: 24px;
+  margin: 10px;
+}
+.game-card p {
+  margin: 10px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.game-card .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.game-card .details span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.game-card .details .rating {
+  display: flex;
+  align-items: center;
+}
+.game-card .details .rating span {
+  margin-right: 5px;
+  color: #ffa500;
+  font-size: 18px;
+}
+.star-ratings {
+  display: inline-block;
+}
+
+.star {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("/static/images/star.png");
+  background-size: 16px;
+  background-repeat: no-repeat;
+}
+
+.star.filled {
+  background-position: 0 -16px;
+}
+
+.game-card .details .platforms {
+  display: flex;
+  flex-wrap: wrap;
+}
+.game-card .details .platforms span {
+  background-color: #ddd;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+select {
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 150px;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.btn-add,
+.btn-filter {
+  background: #0088ff;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 0;
+  outline: 0;
+  text-align: left;
+  min-width: 150px;
+  display: inline-flex;
+  justify-content: space-between;
+  color: #f5f5f5;
+  cursor: pointer;
+}
+
+.btn-filter::after {
+  font-family: sans-serif;
+  content: "▼";
+  padding-left: 0.5em;
+}
+.btn-add::after {
+  font-family: sans-serif;
+  content: "+";
+  padding-left: 0.5em;
+}
+.btn--highlight::after {
+  content: "✓";
+}
+
+/* Game Modal Styles */
+#addGameModal,
+#game-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#addGameModal-content,
+#game-modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 55%;
+  /* display: flex; */
+  /* flex-direction: row; */
+}
+
+#game-modal-content img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+#addGameModal-close,
+#game-modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#addGameModal-close:hover,
+#addGameModal-close:focus,
+#game-modal-close:hover,
+#game-modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style for the form */
+.addNewGame > form {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Style for the form labels */
+.addNewGame > form label {
+  align-self: center;
+  margin: 10px;
+  display: flex;
+}
+
+/* Style for the form inputs */
+.addNewGame > form textarea,
+.addNewGame > form input,
+.addNewGame > form select {
+  margin: 5px 15px 15px 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 320px;
+}
+
+/* Style for the .addNewGame > form button */
+.addNewGame > form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  margin: auto;
+}
+
+/* Style for the confirmation message */
+#confirmation {
+  margin: 20px;
+  padding: 10px;
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+#enter-price-container {
+  display: contents;
+  width: 320px;
+}
+
+#enter-price-container input {
+  width: 100px;
+}
+
+.footer {
+  text-align: center;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+}
+
+.footer-content {
+  text-align: center;
+  background-color: rgba(180, 180, 180, 0.2);
+  color: black;
+  padding: 1.5rem;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: black;
+}
+.hidden {
+  display: none !important;
+}
+
+.no_game {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
