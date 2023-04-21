@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Real Estate</title>
+  <link rel="stylesheet" href="/static/css/home.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    type="text/css">
+  <script src="/static/js/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="/home">
+      <h1>Real Estate</h1>
+    </a>
+    <div>
+      <a href="/add_home">
+        <button class="btn btn-add" id="add-button">Add New Home</button>
+      </a>
+    </div>
+  </header>
+  <section>
+    <form id="get-homes-category">
+      <label for="category">Search Homes based on Category:</label>
+      <select id="category" name="category">
+        <option>---Select--</option>
+        <option value="single-family">Single Family Home</option>
+        <option value="town-house">Town House</option>
+        <option value="condo">Condo</option>
+        <option value="rental">Rental</option>
+      </select>
+      <button type="submit" class="btn btn-success">Search</button>
+    </form>
+  </section>
+  <section>
+    <form id="search-homes">
+      <div class="form-group">
+        <label for="maxPrice">Max Price:</label>
+        <input type="number" name="maxPrice" id="maxPrice" min="0" value="0">
+      </div>
+      <div class="form-group">
+        <label for="squareFootage">Min Area(sq.ft):</label>
+        <input type="number" name="squareFootage" id="squareFootage" min="0" value="0">
+      </div>
+      <div class="form-group">
+        <label for="numBeds">Number of Bedrooms:</label>
+        <input type="number" name="numBeds" id="numBeds" min="0" value="0">
+      </div>
+      <div class="form-group">
+        <label for="numBaths">Number of Bathrooms:</label>
+        <input type="number" name="numBaths" id="numBaths" min="0" value="0">
+      </div>
+      <button type="submit" class="btn btn-success">Search</button>
+    </form>
+  </section>
+  <hr />
+  <h3 id="filter-text">Filter Results: </h3>
+  <main id="home-list" class="home-list">
+  </main>
+  <!-- Home details modal -->
+  <div id="home-modal" class="modal">
+    <div id="home-modal-content" class="modal-content">
+    </div>
+  </div>
+  <script src="/static/js/app.js"></script>
+</body>
+
+</html>

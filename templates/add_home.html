@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Real Estate App</title>
+  <link rel="stylesheet" href="/static/css/home.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <a href="/home">
+      <h1>Real Estate</h1>
+    </a>
+  </header>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Add a Home <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"
+            style="float: right;">Add New Home Owner
+            +</button></h2>
+        <hr />
+        <form id="add-home">
+          <div class="d-flex flex-wrap">
+            <div class="form-group col-md-3">
+              <label for="category">Category:</label>
+              <select class="form-control" id="category" name="category" required>
+                <option>---Select--</option>
+                <option value="single-family" selected>Single Family Home</option>
+                <option value="town-house">Town House</option>
+                <option value="condo">Condo</option>
+                <option value="rental">Rental</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="owner">Home Owner</label>
+              <select class="form-control" id="owner" name="owner" required>
+                <option>---Select--</option>
+                {% for owner in homeowners %}
+                <option value="{{owner.id}}">{{owner.name}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="price">Price</label>
+              <input type="number" class="form-control" id="price" name="price" value="2000" required>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="zipcode">Zipcode/Pincode</label>
+              <input type="text" class="form-control" id="zipcode" name="zipcode" value="2000" max-length="10" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" id="address" name="address" value="Pune" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="description">Description</label>
+              <textarea class="form-control" id="description" name="description" required>22</textarea>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="sqft">Square Footage</label>
+              <input type="number" class="form-control" id="sqft" name="sqft" value="2000" required>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="bedrooms">Bedrooms</label>
+              <input type="number" class="form-control" id="bedrooms" name="bedrooms" value="2000" required>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="bathrooms">Bathrooms</label>
+              <input type="number" class="form-control" id="bathrooms" name="bathrooms" value="2000" required>
+            </div>
+            <div class="form-group col-md-3">
+              <label for="year-built">Year Built</label>
+              <input type="number" class="form-control" id="year-built" name="year_built" value="2000" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="availability">Availability</label>
+              <select class="form-control" id="availability" name="availability" required>
+                <option value="">-- Select --</option>
+                <option value="Available" selected>Available</option>
+                <option value="Sold">Sold</option>
+                <option value="Off the Market">Off the Market</option>
+              </select>
+            </div>
+            <div class="form-group col-md-8">
+              <label for="image-url">Image URL</label>
+              <input type="url" class="form-control" id="image-url" name="imageUrl" value="http://image.jpg" required>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <button type="submit" class="btn btn-primary">Add Home</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+      <form id="add-owner" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add New Home Owner</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <label>Name:</label>
+          <input type="text" name="name">
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Add Home Owner</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+
+</html>
